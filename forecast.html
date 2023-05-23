@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecasts</title>
+  </head>
+    <style>
+        body{font-family: Arial}
+
+        /* Style the top navigation bar */
+        
+        .topnav {
+          overflow: hidden;
+          background-color: #02a2bd; /* For browsers that do not support gradients */
+          background-image: linear-gradient(#02a2bd, #7061d8);
+          opacity: 0.4;
+        }
+        
+        /* Style the topnav links */
+        .topnav a {
+          float: left;
+          display: block;
+          color: #fff;
+          text-align: center;
+          padding: 14px 16px;
+          font-weight: bold;
+          text-decoration: none;
+        }
+        
+        /* Change color on hover */
+        .topnav a:hover {
+          background-color: #334766;
+        }
+        /* Style table */
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            float: left;
+            margin-left: 40px;
+          }
+          
+          th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+          }
+          
+          tr:hover {
+            font-color: black;
+            background-color: #02a2bd;
+            background-color-opacity: 0.1;
+          }
+
+
+    </style>
+    <body>
+        <header>
+            <div class="topnav">
+              <a href="../">Home</a>
+              <a href="">Forecasts</a>
+              <a href="../contact/">Contact</a>
+            </div>
+          </header>    
+    <h1>
+       Waves Bruh
+    </h1>
+    <table>
+        <tr>
+            {% for x in beaches %}
+          <td>{{x.placename}}</td>
+          <td>{{x.descr}}</td>
+          <td>{{x.wavetype}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    </body>
+</html>
